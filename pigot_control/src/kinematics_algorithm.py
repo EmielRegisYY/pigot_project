@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 #coding=utf-8
-=======
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
 import numpy as np
 import math
 import tarj_data as td
 
-<<<<<<< HEAD
-l1 = 0.1  #最初0.15
-=======
-l1 = 0.15
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
+l1 = 0.15  #最初0.15
 l2 = 0.35
 l3 = 0.35
 radio = 40
@@ -35,16 +28,10 @@ def forward_gait():
             yb = y_line[t - 20]
             zf = z_line[t]
             zb = z_line[t - 20]
-<<<<<<< HEAD
         
         #仔细看,每一行的前3个数据和后3个数据相同, 次前3个和后次3个数据相同, 这意味这是对角步态!
         gait_data[t, 0], gait_data[t, 1 ], gait_data[t, 2 ] = leg_ikine(xf, yf, zf)
         gait_data[t, 3], gait_data[t, 4 ], gait_data[t, 5 ] = leg_ikine(xb, yb, zb) 
-=======
-
-        gait_data[t, 0], gait_data[t, 1 ], gait_data[t, 2 ] = leg_ikine(xf, yf, zf)
-        gait_data[t, 3], gait_data[t, 4 ], gait_data[t, 5 ] = leg_ikine(xb, yb, zb)
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
         gait_data[t, 6], gait_data[t, 7 ], gait_data[t, 8 ] = leg_ikine(xb, yb, zb)
         gait_data[t, 9], gait_data[t, 10], gait_data[t, 11] = leg_ikine(xf, yf, zf)
         
@@ -127,10 +114,7 @@ def keep_gait():
     x_line, y_line, z_line = keep_line()
     for t in range(gait_data.shape[0]):
         if (t < 20):
-<<<<<<< HEAD
             #f x,y,z是一组脚 b x,y,z是一组角
-=======
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
             xf = x_line[t]
             xb = x_line[t + 20]
             yf = y_line[t]
@@ -175,17 +159,11 @@ def clam_gait():
         gait_data[t, 3], gait_data[t, 4 ], gait_data[t, 5 ] = leg_ikine(xb, yb, zb)
         gait_data[t, 6], gait_data[t, 7 ], gait_data[t, 8 ] = leg_ikine(xb, yb, zb)
         gait_data[t, 9], gait_data[t, 10], gait_data[t, 11] = leg_ikine(xf, yf, zf)
-<<<<<<< HEAD
     return rate, gait_data #gait_data是个40行12列的数组
     
 
 #这个函数很关键
 def leg_ikine(x, y, z):  #我估计这是解逆运动学方程 通过目标位置或者叫姿势 解出关节角 通俗讲就是关节要转的角度
-=======
-    return rate, gait_data
-    
-def leg_ikine(x, y, z):  
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     theta1 = math.atan2(y, x) + math.atan2(l1, -(x**2 + y**2 - l1**2)**0.5)
     c1 = math.cos(theta1)    
     s1 = math.sin(theta1) 
@@ -209,11 +187,7 @@ def gait_line():
 
 def keep_line():
     data = td.keep_gait()
-<<<<<<< HEAD
     x_line = data[0, :] #切边 第一行所有元素
-=======
-    x_line = data[0, :]
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     y_line = data[1, :]
     z_line = data[2, :]
     return x_line, y_line, z_line

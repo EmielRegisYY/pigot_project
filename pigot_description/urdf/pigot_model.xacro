@@ -2,10 +2,7 @@
 <robot name="pigot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
  <xacro:include filename="$(find pigot_description)/urdf/pigot_body_model.xacro" />
-<<<<<<< HEAD
  <!--<xacro:include filename="$(find pigot_description)/urdf/pigot_arm_model.xacro" />-->
-=======
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
  <xacro:include filename="$(find pigot_description)/urdf/pigot_sensor_model.xacro" />
 
 </robot>
