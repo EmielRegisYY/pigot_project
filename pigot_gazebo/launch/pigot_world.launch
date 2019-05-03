@@ -39,8 +39,12 @@
                           joint9_position_controller
                           joint10_position_controller
                           joint11_position_controller
+<<<<<<< HEAD
                           joint12_position_controller"/>
                          <!-- 去除机械臂link
+=======
+                          joint12_position_controller
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
                           joint13_position_controller
                           joint14_position_controller
                           joint15_position_controller
@@ -49,7 +53,10 @@
                           joint18_position_controller
                           joint19_position_controller
                           joint20_position_controller"/>
+<<<<<<< HEAD
                          -->
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     <!-- convert joint states to TF transforms for rviz, etc -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
       <remap from="/joint_states" to="/pigot/joint_states" />
@@ -57,8 +64,11 @@
     
     <!--node name="sbc_node" pkg="pigot_control" type="self_balance_control.py" respawn="true"/-->
 
+<<<<<<< HEAD
   <!--<node name="pos_pub_node" pkg="pigot_control" type="pos_pub.py" respawn="true"/>-->
   <!--<node name="teleop_control_node" pkg="pigot_control" type="teleop_control.py" respawn="true"/>-->
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
   <!--node name="rqt_plot_node" pkg="rqt_plot" type="rqt_plot" respawn="true"/-->
 
   <!--node name="rpy_pub_node" pkg="pigot_control" type="rpy_pub.py" respawn="true"/>

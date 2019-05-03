@@ -32,7 +32,10 @@
 
 
   <!-- Transmissions for ros_control -->
+<<<<<<< HEAD
   <!--
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
   <xacro:macro name="transmission_block2" params="joint_name">
     <transmission name="trans2">
       <type>transmission_interface/SimpleTransmission</type>
@@ -54,5 +57,8 @@
   <xacro:transmission_block2 joint_name="arm_rot_6"/>
   <xacro:transmission_block2 joint_name="finger_pri_1"/>
   <xacro:transmission_block2 joint_name="finger_pri_2"/>
+<<<<<<< HEAD
   -->
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
 </robot>

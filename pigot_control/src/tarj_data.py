@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 #coding=utf-8
+=======
+# -*-coding:utf-8 -*-
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
 import numpy as np
 import math
 from scipy import interpolate
 
 step_num = 40
 
+<<<<<<< HEAD
 def forward_gait():#摆线步态
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     # Standard cycloidal equation.
     z, x = np.zeros(step_num / 2), np.zeros(step_num / 2)
     E = 0.1 # step length
@@ -26,7 +33,10 @@ def forward_gait():#摆线步态
     forward_gait = np.vstack((x_gait, y_gait, z_gait))
     return forward_gait
 
+<<<<<<< HEAD
 def forward_gait2():#插值步态
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     x = [0.55, 0.60,  0.60,  0.55]
     y = [0.15, 0.15,  0.15,  0.15]
     z = [0.00, 0.00, -0.1,  0.00]
@@ -37,13 +47,19 @@ def forward_gait2():#插值步态
     return forward_gait
 
 def keep_gait():
-    x = [0.55 , 0.55,  0.55,  0.55 ]
+<<<<<<< HEAD
+=======
+    x = [0.55 , 0.6,  0.6,  0.55 ]
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     y = [0.15, 0.15, 0.15,  0.15]
     z = [0.0,  0.0,  0.0,  0.0 ]
     x_gait = interpolate_method(x)
     y_gait = interpolate_method(y)
     z_gait = interpolate_method(z)
+<<<<<<< HEAD
     keep_gait = np.vstack((x_gait, y_gait, z_gait)) #得到一个 3行4列numpy数列
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     return keep_gait
    
 def turn_gait(direction):

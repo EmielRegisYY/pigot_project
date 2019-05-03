@@ -5,8 +5,12 @@
   <xacro:property name="motor_vec" value="12.56"/>
   <xacro:property name="motor_damp" value="0.1"/>
   <xacro:property name="motor_fric" value="0"/>
+<<<<<<< HEAD
   
   <!--
+=======
+
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     <link name="laser_link">
     <inertial>
       <origin
@@ -50,7 +54,10 @@
     <parent link="body_link" />
     <child link="laser_link" />
   </joint>
+<<<<<<< HEAD
   -->
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
 
     <link name="imu_link">
     <inertial>

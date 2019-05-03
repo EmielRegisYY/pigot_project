@@ -1,5 +1,9 @@
 #!/usr/bin/env python
+<<<<<<< HEAD
 #coding=utf-8
+=======
+# -*- coding: utf-8 -*
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
  
 import  os
 import  sys
@@ -21,8 +25,11 @@ def keyboardLoop():
     #显示提示信息
     print("Reading from keyboard")
     print("Use WASD keys to control the robot")
+<<<<<<< HEAD
     #print("Press Caps to move faster")
     print("Press p to quit")
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
  
     #读取按键循环
     while not rospy.is_shutdown():

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
+<<<<<<< HEAD
 #coding=utf-8
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
 # license removed for brevity
 import rospy
 from std_msgs.msg import Float64
@@ -12,12 +15,15 @@ import kinematics_algorithm as ka
 
 def action_pub(gait_data, data_length):
     j = 0
+<<<<<<< HEAD
     while (j<1): #说实话没看懂这个while的作用?不就只跑一次吗?那干嘛还用循环? 估计跟那个sleep有关 一会儿查阅一下相关资料
         for i in range(data_length):
             #通过前面算法的分析,又由于123对应左前腿,101112对应右后腿,可进一步确定这是对角步态.
             joint1_pos_pub.publish(gait_data.data[i, 0]) # 3k+1,k=0,1,2.3 对应肩关节
             joint2_pos_pub.publish(gait_data.data[i, 1]) # 3k+2,k=0,1,2,3 对应髋关节
             joint3_pos_pub.publish(gait_data.data[i, 2]) # 3k+3,k=0,1,2,3 对应膝关节
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
             joint4_pos_pub.publish(gait_data.data[i, 3])
             joint5_pos_pub.publish(gait_data.data[i, 4])
             joint6_pos_pub.publish(gait_data.data[i, 5])
@@ -40,8 +46,11 @@ def command_analysis(action_command):
         rate, gait_np_data = ka.turnleft_gait()
     elif (action_command == 'd'):
         rate, gait_np_data = ka.turnright_gait()
+<<<<<<< HEAD
     #elif (action_command == 'j'):
         #rate, gait_np_data = ka.jump_gait()
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
     elif (action_command == 'k'):
         rate, gait_np_data = ka.keep_gait()
     elif (action_command == 'c'):

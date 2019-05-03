@@ -33,6 +33,8 @@
 
   <!-- laser plugin for 'laser_link' -->
   <!--
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
   <gazebo reference="laser_link">
       <sensor type="ray" name="rplidar">
           <pose>0 0 0 0 0 0</pose>
@@ -64,6 +66,7 @@
           </plugin>
       </sensor>
   </gazebo>
+<<<<<<< HEAD
   -->
 
   <gazebo reference="lf_rot_1">
@@ -115,6 +118,8 @@
   </gazebo>
 
   <!--
+=======
+>>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
   <gazebo reference="arm_rot_1">
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
@@ -142,7 +147,9 @@
   <gazebo reference="finger_pri_1">
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
+<<<<<<< HEAD
   -->
+
 
   <gazebo reference="lf_link_3">
     <kp>1000000.0</kp>
