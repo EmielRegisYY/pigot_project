@@ -6,56 +6,6 @@
   <xacro:property name="motor_damp" value="0.1"/>
   <xacro:property name="motor_fric" value="0"/>
   
-  <!--
-=======
-
->>>>>>> 3bb435b0de6d0dba72d20d871a34d0bc29441e5c
-    <link name="laser_link">
-    <inertial>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <mass
-        value="0.1" />
-      <inertia
-        ixx="0.01"
-        ixy="0"
-        ixz="0"
-        iyy="0.01"
-        iyz="0"
-        izz="0.01" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <cylinder length="0.05" radius="0.05"/>
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <cylinder length="0.05" radius="0.05"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="laser_joint" type="fixed">
-    <origin xyz="0 0 0.125" rpy="0 0 0" />
-    <parent link="body_link" />
-    <child link="laser_link" />
-  </joint>
-<<<<<<< HEAD
-  -->
-
 
     <link name="imu_link">
     <inertial>

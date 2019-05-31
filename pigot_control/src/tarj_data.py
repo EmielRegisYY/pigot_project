@@ -9,7 +9,7 @@ step_num = 40
 def forward_gait():#摆线步态
     # Standard cycloidal equation.
     z, x = np.zeros(step_num / 2), np.zeros(step_num / 2)
-    E = 0.1 # step length
+    E = 0.2 # step length
     h = 0.05 # step height
     theta = np.linspace(0, 2 * math.pi, step_num / 2)
     for i in range(step_num / 2):
@@ -38,7 +38,7 @@ def forward_gait2():#插值步态
     return forward_gait
 
 def keep_gait():
-    x = [0.55 , 0.6,  0.6,  0.55 ]
+    x = [0.55 , 0.55,  0.55,  0.55 ]
     y = [0.15, 0.15, 0.15,  0.15]
     z = [0.0,  0.0,  0.0,  0.0 ]
     x_gait = interpolate_method(x)

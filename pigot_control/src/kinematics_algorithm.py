@@ -19,7 +19,7 @@ def forward_gait():
             xb = x_line[t + 20]
             yf = y_line[t]
             yb = y_line[t + 20]
-            zf = z_line[t]
+            zf = z_line[t]    #这里是和后退有差别的地方
             zb = z_line[t + 20]
         else:
             xf = x_line[t]
@@ -36,6 +36,34 @@ def forward_gait():
         gait_data[t, 9], gait_data[t, 10], gait_data[t, 11] = leg_ikine(xf, yf, zf)
         
     return rate, gait_data
+
+def forward_gait2():
+    gait_data = np.zeros((radio, 12))
+    x_line, y_line, z_line = gait_line2()
+    for t in range(gait_data.shape[0]):
+        if (t < 20):
+            xf = x_line[t]
+            xb = x_line[t + 20]
+            yf = y_line[t]
+            yb = y_line[t + 20]
+            zf = z_line[t]    #这里是和后退有差别的地方
+            zb = z_line[t + 20]
+        else:
+            xf = x_line[t]
+            xb = x_line[t - 20]
+            yf = y_line[t]
+            yb = y_line[t - 20]
+            zf = z_line[t]
+            zb = z_line[t - 20]
+        
+        #仔细看,每一行的前3个数据和后3个数据相同, 次前3个和后次3个数据相同, 这意味这是对角步态!
+        gait_data[t, 0], gait_data[t, 1 ], gait_data[t, 2 ] = leg_ikine(xf, yf, zf)
+        gait_data[t, 3], gait_data[t, 4 ], gait_data[t, 5 ] = leg_ikine(xb, yb, zb) 
+        gait_data[t, 6], gait_data[t, 7 ], gait_data[t, 8 ] = leg_ikine(xb, yb, zb)
+        gait_data[t, 9], gait_data[t, 10], gait_data[t, 11] = leg_ikine(xf, yf, zf)
+        
+    return rate, gait_data
+
 
 
 def backward_gait():
@@ -180,6 +208,13 @@ def leg_ikine(x, y, z):  #我估计这是解逆运动学方程 通过目标位�
 
 def gait_line():
     data = td.forward_gait()
+    x_line = data[0, :]
+    y_line = data[1, :]
+    z_line = data[2, :]
+    return x_line, y_line, z_line
+
+def gait_line2():
+    data = td.forward_gait2()
     x_line = data[0, :]
     y_line = data[1, :]
     z_line = data[2, :]
